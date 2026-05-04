@@ -207,8 +207,8 @@ console.log(result);
 // Assignment:
 // Write a program to display the grade of a student:
 // >90 - A
-// >80 && <90- B
+// >80 && <90 - B
 // >70 && <80 - C
-// >50 && <70 -D
+// >50 && <70 - D
 // <50 - Failed
 
