@@ -40,13 +40,13 @@ console.log("***************************")
 // }
 
 let obj = {
-    name: 'Rahul',
+    name: 'Rahul' ,                                    
     age: 30
 }
 
-for (let a in obj){
-    console.log(obj[a])  
-}
+// for (let a in obj){
+//     console.log(obj[a])  
+// }
 
 // 1. for loop 
 // Syntax:
@@ -62,7 +62,7 @@ for(initialization; condition; increment/decrement)
 }
 
 Initialization - Initialize the value of the variable to start the iteration: 
-Ex:- let i=0
+5gxb hdgfgb fjnvdtt
 Condition - Condition to check whether the loop should continue or not:
 Ex:- i<=5
 
@@ -80,12 +80,93 @@ console.log("**************************");
 
 // 10 to 1
 
-for(let i=10; i>=1; i--) // 10>=1               // i<=10, i<=1, i>=1 
+
+for(var i=10; i>=1; i--) // 10>=1               // i<=10, i<=1, i>=1 
 {
+  if(i==5){
+    break
+  }
   console.log(i) // 10 9........1.........infite
+
 }
 
+// break - To exit the loop when a certain condition is met
+// continue - To skip the current iteration and move to the next iteration
+
 // While, do while and break, continue
+
+// 2. while loop
+// Syntax:
+
+/*
+
+initialization - let j = 1
+
+while(condition){ // 0 < 3 
+  // code to be executed
+  increment/decrement - j++/j--
+}
+
+*/
+// 3 - 
+// attempt = 3
+// attempt < 3
+// attempt >=3
+// attempt < 3
+// attempt > 3 , >=0
+
+console.log("*****************************");
+
+
+let attempt = 1
+
+while(attempt >=3){
+    console.log("Attempt = "+ (attempt));
+    attempt++
+}
+
+// console.log("Your account has been locked");
+
+
+console.log("*****************************");
+
+
+// 3. do while loop
+
+// Syntax:
+/*
+
+initialization - let k = 1
+
+do{
+    // code to be executed
+}while(condition);
+
+*/
+
+
+let attempts = 2
+
+do{
+    console.log("Attempt = "+ (attempts));
+    attempts++ // 4
+    
+}while(attempts <=3); // 4>=3
+
+
+for(let i=1; i<=3; i++){
+    for(let j=1; j<=3; j++){
+        console.log(i+" "+j);
+    }  
+}
+
+
+
+
+
+
+
+
 
 
 
