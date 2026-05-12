@@ -17,7 +17,7 @@ function login(email:string, password:string){
 // Reusability - We can reuse the code whenever we want
 
 
-// 1. Named function - Function declaration
+// 1. Named function - Function declaration - If you want to reuse the function multiple time
 // 2. Anonymous function - Function expression
 // 3. Arrow function - ES6(2015) - Lambda function
 // 4. Constructor function - Class
@@ -109,9 +109,107 @@ console.log("Line # 102: "+sum1)
 // Argument - It is a value that is passed to the function when it is called. 
 
 
+// let i = Function
 
 
+// 2. Anonymous function - Function Expression - A function which will not have any name.
+// A function which is declared without any name that function will be stored inside a varaible
+// The variable where we stored the function becomes the name of the function
 
+
+// Call back function - A function which will be utilised as a paramter of another function
+// is known as call back function.
+
+/*
+function adds(fun:Function){
+    fun()
+
+}
+
+adds(function aa(){
+    console.log("This is a call back function"); 
+})
+
+*/
+
+
+// Syntax:
+/*
+
+let functionName = function(param:datatype):returntype{
+   // code to be executed
+   return
+}
+
+functionName(argument)
+
+
+*/
+
+let message = function(name:string, age:number){
+    console.log(`Your name is ${name} and age is ${age}`);  
+}
+
+message("Rahul", 25)
+message("John", 35)
+
+
+// 3. Arrow Function - Function Expression (=>) - Lambda Function - ES 6 - 2015
+
+// 1. This is also a part of anonymous function and will not have any name
+// 2. This function will be declared by using (=>) arrow symbol after the paranthesis
+// 3. Arrow function use to shorten the number of lines of code
+// 4. If there is only one line of the code inside the function then we can skip the curly
+// braces inside the arrow function.
+
+// Syntax:
+
+/*
+
+let variable = (param:datatype)=>{
+  // code 
+}
+
+variable()
+
+*/
+
+let message1 = 
+(name:string, age:number)=> console.log(`Your name is ${name} and age is ${age}`)  
+
+
+message1("Joe",28)
+
+
+// Default parameter and Optional parameter
+
+
+function sum2(a:number=100, b:number=50){
+    console.log(a+b); 
+}
+
+sum2()
+sum2(10,49)
+
+// Default Parameter - A parameter which has a default value
+
+// Method overloading is a process where you can declare the same method name with different parameter
+
+
+// Optional Paramter (p?) -  A parameter which may or may not be provided with the value during
+// the function call
+
+function display(name: string, age?:number){
+    console.log(name, age); 
+}
+
+display("Priya")
+display("Raj", 20)
+
+
+// Assignment - Complete the display function by writing the logic to print only
+// name if age parameter has not given any value and print both name and age 
+// if age value has also been given at the time calling the function.
 
 
 
