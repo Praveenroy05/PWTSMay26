@@ -127,10 +127,83 @@ console.log(arr8);
 arr8.shift()
 console.log(arr8);
 
+// What is difference between slice() and splice() methon in an array?
+
 
 // splice(), slice(), indexOf(), lastIndexOf(), includes(), join()
 
-// string
+
+// 4. splice(startIndex, deleteCount, ele1, ele2, ele3,....) - Add/Remove the element
+// from the array at specified index
+
+// startIndex - The position wherw you want to add/delete the element
+// deleteCount - The number of element to be deleted from array
+// ele1, ele2, ele3,.... - The element that you want to add at the startIndex
+
+let arr9 = [10,20,30,40,"TS", 50, 60]
+console.log(arr9);
+
+arr9.splice(2, 0, "Java", "JS", 100, 200, 300)
+console.log(arr9);
+
+
+// 5. slice(startIndex?, endIndex?) - Returns the portion of an element from
+// startIndex to endIndex-1
+
+// startIndex - The position where you want the start the slice
+// endIndex(Exclusive) - The position where you want the end the slice
+
+console.log(arr9.slice(2,8)) // from index 2 to index 7
+
+
+
+// 6. indexOf(element, startIndex?) - Returns the index of the first occurances of an element
+// in an array, or -1 if not found
+
+// arrayName.indexOf(element, startIndex?)
+
+let arr10 = [10,20,30,40,50,60, 10, 70, 10, 20]
+
+let index = arr10.indexOf(10) // 
+console.log(index)
+console.log(arr10.indexOf(10, 9))
+
+// Assignement - 1:
+// To find out all the index of 10 available inside arr10 - 0,6,8
+
+// 7. lastIndexOf(element, startIndex?) - Returns the index of the last occurances 
+// of an element inside an array
+
+// arrayName.lastIndexOf(element, startIndex?)
+
+console.log(arr10.lastIndexOf(10, 5))
+
+// 8. includes(element, startIndex?) - Returns true if the element is found in the array
+// otherwise false
+
+console.log(arr10.includes(70))
+console.log(arr10.includes(30, 2));
+
+
+// 9. join(separator?) - Joins all the elements of an array and return as a string
+
+let arr11 = [20,11,2026] // dd-mm-yyyy
+let joinResult = arr11.join("-")
+console.log(joinResult);
+
+// 10. toString() - Convert the array into string
+console.log(arr11.toString());
+
+
+// string 
+// Objects - Class - Framework generation
+// playwright 
+
+
+
+
+
+
 
 
 
