@@ -121,6 +121,11 @@ console.log(str3.replace("i", "@"))
 console.log(str3.replaceAll("i", "@"));
 
 
+// Framework
+// Objects
+// Class
+
+
 
 
 
