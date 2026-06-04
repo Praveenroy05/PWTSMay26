@@ -45,3 +45,43 @@
 // 3. Click on the drop down element identified in the step #2
 // 4. Identify and click on the element that you want to select from the drop down
 
+import {test, expect} from '@playwright/test'
+
+test("Handling drop down developed using SELECT tag", async ({page})=>{
+    // 1. Launch the url
+    await page.goto("https://practice.expandtesting.com/dropdown")
+
+    // 2. Locate the drop down element by writing the locator
+    const countryDD = page.locator("#country")
+
+    // 3. Get the value from the drop down using - 
+    // selectOption("value", {label or value or index})
+    await countryDD.selectOption("AU")
+    
+    // toHaveValue("AU")
+    await expect(countryDD).toHaveValue("AU")
+
+    // 2nd way we can also use value as an optional paramter
+    await countryDD.selectOption({value:"BR"})
+
+    // 3rd way - by using label as optional parameter
+    await countryDD.selectOption({label:'Wallis and Futuna'})
+
+    // 4th way - by using index
+    await countryDD.selectOption({index: 102})
+
+
+    await page.goto("https://demoqa.com/select-menu")
+    const carDD = await page.locator("#cars")
+    await carDD.selectOption(["volvo", "opel"])
+    await expect(carDD).toHaveValues(["volvo", "opel"])
+    await carDD.selectOption([{label:'Saab'}, {index:3}, {value:'volvo'}])
+
+
+
+})
+
+// Assignement to complete - 
+// Select the value from the drop down which have been developed using NON SELECT
+
+// https://demoqa.com/select-menu
