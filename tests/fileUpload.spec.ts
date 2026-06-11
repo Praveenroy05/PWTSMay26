@@ -8,8 +8,8 @@ test("Handling file uploads", async function({page}){
 
    // console.log(__dirname) // C:\Users\pkroy\Videos\PWTSMay26\tests../testdata/AILLM.jpg
 
-    const filePath = path.join(__dirname, "../testdata/AILLM.jpg")
-    const filePath1 = path.join(__dirname, "../testdata/AILLM1.jpg")
+    // const filePath = path.join(__dirname, "../testdata/AILLM.jpg")
+    // const filePath1 = path.join(__dirname, "../testdata/AILLM1.jpg")
    // console.log(filePath) // C:/Users/pkroy/Videos/PWTSMay26/testdata/AILLM.jpg
     
 

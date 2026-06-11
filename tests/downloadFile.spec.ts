@@ -17,7 +17,7 @@
 import {test, expect} from '@playwright/test'
 import path from 'path'
 
-test.only("Handling file download scenario", async ({page})=>{
+test("Handling file download scenario", async ({page})=>{
     await page.goto("https://demoqa.com/upload-download")
 
     const downloadResult = page.waitForEvent('download')
@@ -26,6 +26,8 @@ test.only("Handling file download scenario", async ({page})=>{
     await page.locator("#downloadButton").click()
 
     const download = await downloadResult
+   //  console.log(download);
+    
 
     const downloadDir = await path.join(__dirname,"../downloads")
     console.log(downloadDir);
@@ -41,17 +43,8 @@ test.only("Handling file download scenario", async ({page})=>{
     console.log(filePath)
 
    // saveAs(filepath) - Copy the download to a user-specified path
-   
+
     await download.saveAs(filePath)
 
    await expect(filePath).toContain(fileName)
-
-    
-
-
-
-
-
-
-    
 })
