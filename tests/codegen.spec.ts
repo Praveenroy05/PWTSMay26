@@ -5,7 +5,7 @@
 import { test, expect } from '@playwright/test';
 
 
-test.only('test', async ({ page }) => {
+test('test', async ({ page }) => {
   await page.goto('https://demo.automationtesting.in/Frames.html');
   await page.locator('iframe[name="SingleFrame"]').contentFrame().getByRole('textbox').click();
   await page.locator('iframe[name="SingleFrame"]').contentFrame().getByRole('textbox').fill('Testing');
@@ -15,4 +15,9 @@ test.only('test', async ({ page }) => {
   await page.locator('#Multiple').getByText('<p>Your browser does not').contentFrame().getByText('<p>Your browser does not').contentFrame().getByRole('textbox').fill('Nested');
   await expect(page.locator('#Multiple').getByText('<p>Your browser does not').contentFrame().getByText('<p>Your browser does not').contentFrame().getByRole('textbox')).toHaveValue('Nested');
 });
+
+// E2E
+// Shadow dom element
+// Class / Object
+// Framework
 
