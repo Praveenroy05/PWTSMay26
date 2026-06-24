@@ -91,6 +91,9 @@ class Employee{
 
 }
 
+
+
+
 const obj = new Employee(101, "Rahul", 30, 100000)
 console.log(obj.empId);
 obj.employeeInformation()
@@ -104,6 +107,36 @@ Employee.displayCompany()
 // Object- collection of key-value pair inside the {}
 
 console.log(obj);
+
+
+// Inheritance  - Acquiring the properties and methods from the parent
+// extend - help us in performing inheritance
+// super() - Calls the parent class constructor
+
+class Manager extends Employee{
+
+    bonus: number
+    
+    constructor(id:number, name:string, age:number, salary:number, bonus:number){
+        super(id, name, age, salary)
+        this.bonus = bonus
+    }
+
+    displayManagerInfo(){
+        this.employeeInformation()
+        console.log("Bonus is : ", this.bonus);
+        
+    }
+
+}
+
+
+const mgr = new Manager(101, "Joe", 27, 130000, 20000)
+mgr.displayManagerInfo()
+console.log(mgr.empId);
+
+
+
 
 
 
