@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "fullTest":"npx playwright test",
+    "smokeTest": "npx playwright test -g @smoke",
+    "regressionTest": "npx playwright test -g @regression",
+    "lpTest" : "npx playwright test tests/LoginPageTest.spec.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Praveenroy05/PWTSMay26.git"
